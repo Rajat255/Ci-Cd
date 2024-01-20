@@ -30,3 +30,4 @@ jobs:
         previousBuildNumber=$((GITHUB_RUN_NUMBER-1))
         previousImageName="python/flask:${previousBuildNumber}"
         docker image rm $previousImageName || true
+        curl 127.0.0.0:5000
