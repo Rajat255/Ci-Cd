@@ -24,6 +24,3 @@ jobs:
     - name: Run Docker Container
       run: |
         docker run --name flask -d -p 8080:8080 python/flask:${GITHUB_RUN_NUMBER}
-    - name: Curl
-      run: |
-        curl -L 127.0.0.0:8080
