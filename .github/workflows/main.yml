@@ -32,5 +32,11 @@ jobs:
       uses: scribe-security/action-installer@master
       with:
         tools: valint
-      run: sudo bash -e -c "source $HOME/.scribe/scribe-tool/valint/1.0.0/activate"
+        install-dir: $GITHUB_WORKSPACE/scribe-tool
+
+    - name: Activate Scribe tool
+      run: |
+        source $GITHUB_WORKSPACE/scribe-tool/valint/1.0.0/activate
+
+
 
